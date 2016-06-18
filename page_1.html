@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="style.css">
+	<title></title>
+</head>
+<body>
+	<img id="myImage" onclick="changeImage()" src="images/pic_bulboff.gif" draggable="true" width="100" height="180">
+
+	<p>Click the ligh bulb to turn on/off the light.</p>
+
+	<p>Please input a number between 1 and 10:</p>
+
+	<input id="numb">
+
+	<button type="button" onclick="chooseNumber()">Submit</button>
+
+	<p id="demo"></p>
+
+	<button onclick="changeColor()">Change!</button>
+	<p>I can change colors <b id="demo4">[ Text Color ]</b></p>
+	<p id="demo3" onmouseenter="changeColor()">I can change colors too!<b>[ Text Color ]</b></p>
+
+	<button type="button" onclick="showDate()">Click</button>
+	<button onclick="grow()">+</button>
+	<button onclick="shrink()">-</button>
+	<p id="demo2" style="font-size:13px"></p>
+
+	<input id="factorial">
+	<button onclick="count()">Factorial</button>
+ 
+
+	<p>
+		Celsius: <input id="c2f">
+		<button onclick="cel2fahr()">Convert</button><br>
+		Fahrenheit: <input id="c2f_result" disabled>
+	</p>
+
+	<p>
+		<input oninput="calculate()" id="calc">
+		<!-- <button onmouseover="calculate()">Calculate</button> -->
+		<br>
+		<input id="calc_result" disabled> 	
+	</p>
+
+	<button onclick="document.write('Test')" disabled>Errase Page</button>
+
+	<script src="code.js"></script>
+
+    <p>
+        <div class="button1" id="new1" onmouseover="changeBg(1)">
+        <p>BG 1</p>
+        </div>
+        <div class="button1" id="new2" onmouseover="changeBg(2)">
+            <p>BG 2</p>
+        </div>
+        <div class="button1" id="new3" onmouseover="changeBg(3)">
+            <p>BG 3</p>
+        </div>
+    </p>
+
+
+</body>
+</html>
