@@ -174,6 +174,7 @@ console.log(programmer1);
 // String methods
 var str = "Test string";
 console.log("-------------- String Test ------------------------");
-console.log(str, str.length)
+console.log(str, str.length);
+// return -1 if the text is not found
 console.log(str.indexOf("Test"), str.lastIndexOf("string"));
 console.log("---------------------------------------------------");

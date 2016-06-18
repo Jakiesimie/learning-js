@@ -1,5 +1,6 @@
 div p {
-    margin: auto;
+    height: 50px;
+    line-height: 50px;
 }
 
 .button1 {
@@ -8,5 +9,6 @@ div p {
     background-color: saddlebrown;
     color: darkorange;
     text-align: center;
+    font-weight: bold;
     margin: 20px;
 }
