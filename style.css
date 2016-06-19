@@ -1,14 +1,38 @@
-div p {
-    height: 50px;
-    line-height: 50px;
+div div {
+    display: inline-table;
+}
+
+.navigation {
+    background-color: #4fa7ff;
+    margin: 10px;
 }
 
 .button1 {
     width: 100px;
     height: 50px;
-    background-color: saddlebrown;
+    background-color: rgb(176, 23, 0);
     color: darkorange;
     text-align: center;
     font-weight: bold;
-    margin: 20px;
+    margin: 5px;
+    /*vertical-align: top;*/
+    display: inline-table;
+}
+
+.button2 {
+    width: 100px;
+    height: 50px;
+    background-color: rgb(151, 176, 3);
+    color: #ffd18f;
+    text-align: center;
+    font-weight: bold;
+    margin: 5px;
+    /*vertical-align: top;*/
+    align-content: right;
+    display: inline-table;
+}
+
+.thumb {
+    width: 400px;
+
 }

@@ -5,9 +5,39 @@
 	<title></title>
 </head>
 <body>
-	<img id="myImage" onclick="changeImage()" src="images/pic_bulboff.gif" draggable="true" width="100" height="180">
 
-	<p>Click the ligh bulb to turn on/off the light.</p>
+<div class="navigation">
+    <div class="button1" id="new1" onmouseover="changeBg(1)">
+        <p>BG 1</p>
+    </div>
+    <div class="button1" id="new2" onmouseover="changeBg(2)">
+        <p>BG 2</p>
+    </div>
+    <div class="button1" id="new3" onmouseover="changeBg(3)">
+        <p>BG 3</p>
+    </div>
+
+    <div class="button2" id="new4" onmouseover="changeImg(1)">
+        <p>IMG 1</p>
+    </div>
+    <div class="button2" id="new5" onmouseover="changeImg(2)">
+        <p>IMG 2</p>
+    </div>
+    <div class="button2" id="new6" onmouseover="changeImg(3)">
+        <p>IMG 3</p>
+    </div>
+</div>
+
+<div>
+    <div>
+        <img id="myImage" onclick="changeImage()" src="images/pic_bulboff.gif" draggable="true" width="100" height="180">
+
+        <p>Click the ligh bulb to turn on/off the light.</p>
+    </div>
+    <div>
+        <img class="thumb" id="myImage2" src="images/sky1.jpg">
+    </div>
+</div>
 
 	<p>Please input a number between 1 and 10:</p>
 
@@ -49,19 +79,6 @@
 	</p>
 
 	<script src="code.js"></script>
-
-    <p>
-        <div class="button1" id="new1" onmouseover="changeBg(1)">
-        <p>BG 1</p>
-        </div>
-        <div class="button1" id="new2" onmouseover="changeBg(2)">
-            <p>BG 2</p>
-        </div>
-        <div class="button1" id="new3" onmouseover="changeBg(3)">
-            <p>BG 3</p>
-        </div>
-    </p>
-
 
 </body>
 </html>

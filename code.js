@@ -150,6 +150,19 @@ function changeBg (bg) {
     }
 }
 
+function changeImg (num) {
+    var image = document.getElementById("myImage2");
+
+    console.log(image);
+    if (num == 1) {
+        image.src = "images/sky1.jpg";
+    } else if (num == 2) {
+        image.src = "images/sky2.jpg";
+    } else if (num == 3) {
+        image.src = "images/sky3.jpg";
+    }
+}
+
 /*
  =========
  Objects
