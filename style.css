@@ -1,10 +1,15 @@
-div div {
-    display: inline-table;
+/*div div {*/
+    /*!*display: inline-table;*!*/
+/*}*/
+
+.main {
+    margin: 50px;
 }
 
 .navigation {
-    background-color: #4fa7ff;
-    margin: 10px;
+    background-color: #c2bdff;
+    /*margin: 10px;*/
+    /*display: table-column;*/
 }
 
 .button1 {
@@ -32,7 +37,22 @@ div div {
     display: inline-table;
 }
 
-.thumb {
-    width: 400px;
+.button3 {
+    width: 200px;
+    height: 100px;
+    background-color: rgb(151, 176, 3);
+    color: #ffd18f;
+    /*vertical-align: center;*/
+}
 
+.xs_thumb {
+    width: 200px;
+    height: 100px;
+    /*vertical-align: center;*/
+}
+
+.thumb {
+    width: 1000px;
+    height: 500px;
+    /*display: inline-table;*/
 }

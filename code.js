@@ -96,9 +96,6 @@ for(var i = 0; i < 20; i++) {
 		document.writeln(num + " ");
 }
 
-console.log(10 == '10');
-console.log(10 === '10');
-
 var x = 3, y = 4, z;
 
 console.log(x + ' ' + y + ' ' + z);
@@ -185,9 +182,13 @@ console.log(programmer1);
 // var Programmer = new
 
 // String methods
+// str,length;
+// str.search();
+// str.indexOf(searched_string);
+// str.lastIndexOf(searched_string);
 var str = "Test string";
 console.log("-------------- String Test ------------------------");
 console.log(str, str.length);
 // return -1 if the text is not found
-console.log(str.indexOf("Test"), str.lastIndexOf("string"));
+console.log("Test".includes("T"), str.lastIndexOf("string"));
 console.log("---------------------------------------------------");
