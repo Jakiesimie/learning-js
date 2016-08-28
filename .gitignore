@@ -3,3 +3,11 @@ polygon_1/
 .idea/
 polygon/
 images/
+*.jpg
+*.bmp
+*.gif
+*.png
+*.tif
+*.ai
+*.pdf
+
