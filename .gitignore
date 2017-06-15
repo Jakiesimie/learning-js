@@ -11,3 +11,5 @@ images/
 *.ai
 *.pdf
 
+/node_modules/
+/dist/
