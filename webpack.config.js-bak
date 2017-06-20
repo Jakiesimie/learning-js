@@ -1,10 +1,14 @@
 let path = require('path');
 
 module.exports = {
-    entry: './src/js/redux_sandbox_1.js',
+    entry: {
+        webpack: './src/js/webpack_app.js',
+        rxjs: './src/js/rxjs_sandbox.js',
+        redux_1: './src/js/redux_sandbox_1.js'
+    },
     output: {
         path: path.join(__dirname, './dist'),
-        filename: 'redux_sandbox_1.bundle.js'
+        filename: '[name].bundle.js'
     },
     module: {
          loaders: [
