@@ -1,9 +1,8 @@
+import React from 'react';
 import ReactDOM from 'react-dom';
 
 import { createStore } from 'redux';
 import expect from 'expect';
-
-// import { createStore } from './redux_sandbox_2';
 
 
 // Reducer
@@ -18,9 +17,10 @@ const counter = (state = 0, action) => {
     }
 };
 
-const Counter = ({ value, onIncrement, onDecrement }) => (
+const Counter = ({value, onIncrement, onDecrement }) => (
     <div>
-        <h1>{value}</h1>
+        <h1>Counter</h1>
+        <h2>{value}</h2>
         <button onClick={onIncrement}>+</button>
         <button onClick={onDecrement}>-</button>
     </div>
@@ -30,24 +30,25 @@ const store = createStore(counter);
 
 const render = () => {
     ReactDOM.render(
-        <Counter value={store.getState()} />,
+        <Counter
+            value={store.getState()}
+            onIncrement={() =>
+                store.dispatch({
+                    type: 'INCREMENT'
+                })
+            }
+            onDecrement={() =>
+                store.dispatch({
+                    type: 'DECREMENT'
+                })
+            }
+        />,
         document.getElementById('counter')
     );
 };
 render();
 
 store.subscribe(render);
-
-
-const increment = document.getElementById('inc');
-increment.addEventListener('click', () => {
-    store.dispatch({ type: 'INCREMENT' })
-});
-
-const decrement = document.getElementById('dec');
-decrement.addEventListener('click', () => {
-    store.dispatch({ type: 'DECREMENT' })
-});
 
 
 // Tests

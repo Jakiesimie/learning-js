@@ -1,5 +1,3 @@
-import ReactDOM from 'react-dom';
-
 import { createStore } from 'redux';
 import expect from 'expect';
 
