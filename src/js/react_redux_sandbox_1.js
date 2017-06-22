@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
 import expect from 'expect';
 
+import './addCounter';
+
 
 // Reducer
 const counter = (state = 0, action) => {
