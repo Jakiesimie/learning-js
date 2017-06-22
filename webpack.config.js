@@ -1,27 +1,19 @@
-let path = require('path');
+const path = require('path');
 
 module.exports = {
-    entry: './src/js/redux_sandbox_1.js',
+    entry: './src/js/react_redux_sandbox_1.js',
     output: {
-        path: path.join(__dirname, './dist'),
-        filename: 'redux_sandbox_1.bundle.js'
+        path: path.resolve('dist'),
+        filename: 'index.bundle.js'
     },
     module: {
-         loaders: [
+        loaders: [
             {
                 test: /\.css$/,
                 loader: 'style-loader!css-loader'
             },
-            {
-                test: /\.js$/,
-                loader: 'babel-loader',
-                exclude: /node_modules/,
-                query: {
-                    presets: [
-                        'es2015', 'stage-2'
-                    ]
-                }
-            }
+            { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
+            { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ }
         ],
     },
     plugins: []
