@@ -7,27 +7,17 @@ const addCounter = (list) => {
 };
 
 const removeCounter = (list, index) => {
-    return [
-        ...list.slice(0,index),
-        ...list.slice(index+1)
-    ];
+    return list.filter((e, i) => i !== index)
 };
 
 const incrementCounter = (list, index) => {
-    return [
-        ...list.slice(0,index),
-        list[index] + 1,
-        ...list.slice(index+1)
-    ];
+    return list.map((e, i) => i === index ? e+1 : e)
 };
 
 const decrementCounter = (list, index) => {
-    return [
-        ...list.slice(0,index),
-        list[index] - 1,
-        ...list.slice(index+1)
-    ];
+    return list.map((e, i) => i === index ? e-1 : e)
 };
+
 
 const testAddCounter = () => {
     const listBefore = [];
