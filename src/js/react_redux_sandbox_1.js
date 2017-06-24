@@ -5,6 +5,7 @@ import { createStore } from 'redux';
 import expect from 'expect';
 
 import './addCounter';
+import './todoListReducer';
 
 
 // Reducer
