@@ -2,7 +2,7 @@ import { combineReducers, createStore } from 'redux';
 import expect from 'expect';
 import deepFreeze from 'deep-freeze';
 
-// import { myCombineReducers } from 'myCombineReducers';
+import myCombineReducers from './myCombineReducers';
 
 
 const todo = (state, action) => {
@@ -53,7 +53,12 @@ const visibilityFilter = (state = 'SHOW_ALL', action) => {
     }
 };
 
-const todoApp = combineReducers({
+// const todoApp = combineReducers({
+//     todos,
+//     visibilityFilter
+// });
+
+const todoApp = myCombineReducers({
     todos,
     visibilityFilter
 });

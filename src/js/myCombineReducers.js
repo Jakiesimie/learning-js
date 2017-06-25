@@ -1,10 +1,18 @@
 const myCombineReducers = (reducers) => {
-    reducers.map(r => {
-        r: r(
-            state.todos,
-            action
-        )
-    })
+    return (state = {}, action) => {
+        return Object.keys(reducers).reduce(
+            (nextState, key) => {
+                // console.log('++++', reducers['todos']);
+                console.log('===== ', nextState, key);
+                nextState[key] = reducers[key](
+                    state[key],
+                    action
+                );
+                return nextState;
+            },
+            {}
+        );
+    };
 };
 
 
@@ -22,4 +30,4 @@ const myCombineReducers = (reducers) => {
 // };
 
 
-export default { myCombineReducers };
+export default myCombineReducers;
