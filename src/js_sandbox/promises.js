@@ -8,8 +8,21 @@ let p = new Promise((resolve, reject) => {
     }, 2000)
 });
 
-p.then(data => console.log('Success: ' + data));
-p.catch(error => console.log('Error: ' + error));
+
+let output = document.getElementById('promise');
+p
+    .then(data => {
+        console.log('Success: ' + data);
+        return 'It was a success!:)';
+    })
+    .then(data => {
+        console.log(data);
+        return 'Success again!';
+    })
+    .then(data => {
+        output.innerText = data;
+    })
+    .catch(error => console.log('Error: ' + error));
 
 // p.then(
 //     data => console.log('Success: ' + data),
