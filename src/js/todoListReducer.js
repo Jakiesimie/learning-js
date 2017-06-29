@@ -1,8 +1,9 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 import { combineReducers, createStore } from 'redux';
 import expect from 'expect';
 import deepFreeze from 'deep-freeze';
-
-// import myCombineReducers from './myCombineReducers';
 
 
 const todo = (state, action) => {
@@ -58,20 +59,59 @@ const todoApp = combineReducers({
     visibilityFilter
 });
 
-// const todoApp = (state = {}, action) => {
-//     return {
-//         todos: todos(
-//             state.todos,
-//             action
-//         ),
-//         visibilityFilter: visibilityFilter(
-//             state.visibilityFilter,
-//             action
-//         )
-//     };
-// };
-
 const store = createStore(todoApp);
+
+let nextTodoId = 1;
+
+class TodoApp extends React.Component {
+    render() {
+        return (
+            <div>
+                <input ref={node =>
+                    this.input = node
+                } />
+                <button onClick={() => {
+                    if (this.input.value) {
+                        store.dispatch({
+                            type: 'ADD_TODO',
+                            text: this.input.value,
+                            id: nextTodoId++
+                        });
+                        this.input.value = '';
+                    }
+                }}>
+                    Add Todo
+                </button>
+                <ul>
+                    {this.props.todos.map(todo =>
+                        <li key={todo.id} onClick={() => {
+                            store.dispatch({
+                                type: 'TOGGLE_TODO',
+                                id: todo.id
+                            })
+                        }}
+                        style={{
+                          textDecoration: todo.completed ? 'line-through' : 'none'
+                        }}>
+                            {todo.text}
+                        </li>
+                    )}
+                </ul>
+            </div>
+        )
+    }
+}
+
+const render = () => {
+    ReactDOM.render(
+        <TodoApp todos={store.getState().todos} />,
+        document.getElementById('root')
+    )
+};
+
+store.subscribe(render);
+render();
+
 
 const currentState = (store, stateType) => {
     console.log(stateType + ' state:');
